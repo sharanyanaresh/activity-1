@@ -16,12 +16,24 @@ def median(data):
     else:
         return data[mid]
 
-print("Temperature Average:", average(temperature))
-print("Temperature Median:", median(temperature))
+results = f"""
+Weather Analysis – Gandhinagar (Last 10 Days)
 
-print("Humidity Average:", average(humidity))
-print("Humidity Median:", median(humidity))
+Temperature:
+Average: {average(temperature)}
+Median: {median(temperature)}
 
-print("AQI Average:", average(aqi))
-print("AQI Median:", median(aqi))
+Humidity:
+Average: {average(humidity)}
+Median: {median(humidity)}
+
+AQI:
+Average: {average(aqi)}
+Median: {median(aqi)}
+"""
+
+print(results)
+
+with open("results.txt", "w") as file:
+    file.write(results)
 
