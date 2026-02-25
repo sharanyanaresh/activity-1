@@ -36,4 +36,3 @@ print(results)
 
 with open("results.txt", "w") as file:
     file.write(results)
-
